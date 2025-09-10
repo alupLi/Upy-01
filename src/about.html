@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Главная - UPY-01</title>
-    <meta name="description" content="Крутой сайт для мейнеров hoodwink">
+    <title>О нас - UPY-01</title>
+    <meta name="description" content="Узнайте больше о нашей компании и истории">
     <link rel="icon" href="../assets/favicon.ico" type="image/x-icon">
 
     <style>
@@ -34,7 +34,6 @@
             padding: 0 20px;
         }
 
-        /* Header Styles */
         header {
             background-color: #2d2d2d;
             padding: 1rem 0;
@@ -62,7 +61,6 @@
                 color: #ff66cc;
             }
 
-        /* Navigation Styles */
         nav ul {
             display: flex;
             list-style: none;
@@ -104,7 +102,23 @@
                 width: 80%;
             }
 
-        /* Main Content Styles */
+        .breadcrumbs {
+            background-color: #2d2d2d;
+            padding: 1rem;
+            border-radius: 5px;
+            margin-bottom: 2rem;
+            font-size: 0.9rem;
+        }
+
+            .breadcrumbs a {
+                color: #ff00aa;
+                text-decoration: none;
+            }
+
+            .breadcrumbs span {
+                color: #999;
+            }
+
         main {
             padding: 2rem 0;
             min-height: calc(100vh - 200px);
@@ -141,25 +155,6 @@
             font-size: 1.1rem;
         }
 
-        /* Button Styles */
-        a.button {
-            display: inline-block;
-            background: linear-gradient(45deg, #ff00aa, #ff66cc);
-            color: white;
-            padding: 0.8rem 1.5rem;
-            text-decoration: none;
-            border-radius: 25px;
-            transition: all 0.3s ease;
-            border: none;
-            cursor: pointer;
-            font-weight: bold;
-        }
-
-            a.button:hover {
-                transform: translateY(-2px);
-                box-shadow: 0 5px 15px rgba(255, 0, 170, 0.4);
-            }
-
         /* Footer Styles */
         footer {
             background-color: #2d2d2d;
@@ -173,12 +168,6 @@
                 color: #999;
             }
 
-        /* Smooth scrolling */
-        html {
-            scroll-behavior: smooth;
-        }
-
-        /* Responsive Design */
         @media (max-width: 768px) {
             .header-content {
                 flex-direction: column;
@@ -206,8 +195,8 @@
                 <a href="index.html" class="logo">UPY-01</a>
                 <nav>
                     <ul>
-                        <li><a href="index.html" class="active">Главная</a></li>
-                        <li><a href="about.html">О нас</a></li>
+                        <li><a href="index.html">Главная</a></li>
+                        <li><a href="about.html" class="active">О нас</a></li>
                         <li><a href="contacts.html">Контакты</a></li>
                     </ul>
                 </nav>
@@ -216,33 +205,37 @@
     </header>
 
     <main class="container">
-        <h1>Добро пожаловать на UPY-01!</h1>
+        <nav class="breadcrumbs" aria-label="Хлебные крошки">
+            <a href="index.html">Главная</a> - <span>О нас</span>
+        </nav>
 
-        <section id="services">
-            <h2>Наши услуги</h2>
-            <p>Мы предлагаем широкий спектр услуг высочайшего качества. Наша команда профессионалов готова реализовать любые ваши идеи и потребности.</p>
-            <p>От веб-разработки до дизайна и маркетинга - мы покрываем все аспекты цифрового присутствия.</p>
-            <a href="#contacts" class="button">Связаться с нами</a>
+        <h1>О нашей компании</h1>
+
+        <section>
+            <h2>Наша история</h2>
+            <p>Наша компания была основана в 2010 году с целью предоставления высококачественных услуг в сфере IT и дизайна. С самого начала мы стремились к инновациям и совершенству.</p>
+            <p>За годы работы мы выросли из небольшой студии в полноценное агентство с командой опытных специалистов, готовых решать самые сложные задачи.</p>
         </section>
 
-        <section id="portfolio">
-            <h2>Портфолио</h2>
-            <p>Здесь вы можете увидеть примеры наших лучших работ. Каждый проект - это уникальная история успеха и инноваций.</p>
-            <p>Мы гордимся каждым выполненным проектом и стремимся к совершенству в каждой детали.</p>
+        <section>
+            <h2>Наша команда</h2>
+            <p>Наша команда состоит из талантливых разработчиков, дизайнеров и маркетологов, которые страстно увлечены своим делом. Каждый член нашей команды вносит свой уникальный вклад в общий успех.</p>
+            <p>Мы постоянно учимся и развиваемся, чтобы оставаться на передовой технологий и трендов в нашей отрасли.</p>
         </section>
 
-        <section id="contacts">
-            <h2>Контактная информация</h2>
-            <p>Свяжитесь с нами для обсуждения вашего проекта. Мы всегда рады новым вызовам и интересным проектам.</p>
-            <p>Телефон: +7 (800) 555-35-35</p>
-            <p>Email: upy01@gamil.com</p>
-            <a href="contacts.html" class="button">Подробнее</a>
+        <section>
+            <h2>Наши ценности</h2>
+            <p>Мы верим в качество, инновации и долгосрочные отношения с клиентами. Наши основные ценности включают:</p>
+            <p>• Качество превыше всего</p>
+            <p>• Инновационный подход</p>
+            <p>• Клиентоориентированность</p>
+            <p>• Профессиональное развитие</p>
         </section>
     </main>
 
     <footer>
         <div class="container">
-            <p>&copy; 2077 UPY-01. Все права защищены.</p>
+            <p>&copy; 2077 UPY-01. Все права защищены!</p>
             <p>Телефон: +7 (123) 456-78-90</p>
         </div>
     </footer>

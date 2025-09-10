@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Главная - UPY-01</title>
-    <meta name="description" content="Крутой сайт для мейнеров hoodwink">
+    <title>Контакты - UPY-01</title>
+    <meta name="description" content="Свяжитесь с нами для обсуждения вашего проекта">
     <link rel="icon" href="../assets/favicon.ico" type="image/x-icon">
 
     <style>
@@ -34,7 +34,6 @@
             padding: 0 20px;
         }
 
-        /* Header Styles */
         header {
             background-color: #2d2d2d;
             padding: 1rem 0;
@@ -62,7 +61,6 @@
                 color: #ff66cc;
             }
 
-        /* Navigation Styles */
         nav ul {
             display: flex;
             list-style: none;
@@ -104,7 +102,23 @@
                 width: 80%;
             }
 
-        /* Main Content Styles */
+        .breadcrumbs {
+            background-color: #2d2d2d;
+            padding: 1rem;
+            border-radius: 5px;
+            margin-bottom: 2rem;
+            font-size: 0.9rem;
+        }
+
+            .breadcrumbs a {
+                color: #ff00aa;
+                text-decoration: none;
+            }
+
+            .breadcrumbs span {
+                color: #999;
+            }
+
         main {
             padding: 2rem 0;
             min-height: calc(100vh - 200px);
@@ -129,11 +143,31 @@
             margin-bottom: 2rem;
             border-radius: 10px;
             box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .contact-info {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .contact-item {
+            background-color: #3d3d3d;
+            padding: 1.5rem;
+            border-radius: 8px;
+            text-align: center;
             transition: transform 0.3s ease;
         }
 
-            section:hover {
-                transform: translateY(-2px);
+            .contact-item:hover {
+                transform: translateY(-5px);
+            }
+
+            .contact-item h3 {
+                color: #ff00aa;
+                margin-bottom: 1rem;
+                font-size: 1.3rem;
             }
 
         p {
@@ -141,26 +175,6 @@
             font-size: 1.1rem;
         }
 
-        /* Button Styles */
-        a.button {
-            display: inline-block;
-            background: linear-gradient(45deg, #ff00aa, #ff66cc);
-            color: white;
-            padding: 0.8rem 1.5rem;
-            text-decoration: none;
-            border-radius: 25px;
-            transition: all 0.3s ease;
-            border: none;
-            cursor: pointer;
-            font-weight: bold;
-        }
-
-            a.button:hover {
-                transform: translateY(-2px);
-                box-shadow: 0 5px 15px rgba(255, 0, 170, 0.4);
-            }
-
-        /* Footer Styles */
         footer {
             background-color: #2d2d2d;
             padding: 2rem 0;
@@ -173,12 +187,6 @@
                 color: #999;
             }
 
-        /* Smooth scrolling */
-        html {
-            scroll-behavior: smooth;
-        }
-
-        /* Responsive Design */
         @media (max-width: 768px) {
             .header-content {
                 flex-direction: column;
@@ -196,6 +204,10 @@
             h2 {
                 font-size: 1.5rem;
             }
+
+            .contact-info {
+                grid-template-columns: 1fr;
+            }
         }
     </style>
 </head>
@@ -206,9 +218,9 @@
                 <a href="index.html" class="logo">UPY-01</a>
                 <nav>
                     <ul>
-                        <li><a href="index.html" class="active">Главная</a></li>
+                        <li><a href="index.html">Главная</a></li>
                         <li><a href="about.html">О нас</a></li>
-                        <li><a href="contacts.html">Контакты</a></li>
+                        <li><a href="contacts.html" class="active">Контакты</a></li>
                     </ul>
                 </nav>
             </div>
@@ -216,33 +228,53 @@
     </header>
 
     <main class="container">
-        <h1>Добро пожаловать на UPY-01!</h1>
+        <nav class="breadcrumbs" aria-label="Хлебные крошки">
+            <a href="index.html">Главная</a> - <span>Контакты</span>
+        </nav>
 
-        <section id="services">
-            <h2>Наши услуги</h2>
-            <p>Мы предлагаем широкий спектр услуг высочайшего качества. Наша команда профессионалов готова реализовать любые ваши идеи и потребности.</p>
-            <p>От веб-разработки до дизайна и маркетинга - мы покрываем все аспекты цифрового присутствия.</p>
-            <a href="#contacts" class="button">Связаться с нами</a>
+        <h1>Наши контакты</h1>
+
+        <section>
+            <h2>Свяжитесь с нами</h2>
+            <p>Мы всегда рады новым проектам и сотрудничеству. Свяжитесь с нами любым удобным для вас способом, и мы обязательно ответим в кратчайшие сроки.</p>
+
+            <div class="contact-info">
+                <div class="contact-item">
+                    <h3>Телефон</h3>
+                    <p>+7 (123) 456-78-90</p>
+                    <p>+7 (987) 654-32-10</p>
+                </div>
+
+                <div class="contact-item">
+                    <h3>Email</h3>
+                    <p>upy01@gmail.com</p>
+                    <p>supportUpy01@gmail.com</p>
+                </div>
+
+                <div class="contact-item">
+                    <h3>Адрес</h3>
+                    <p>г. Москва, ул. Манежная улица, д. 3</p>
+                    <p>Бизнес-центр "UPY01", офис 001</p>
+                </div>
+
+                <div class="contact-item">
+                    <h3>Часы работы</h3>
+                    <p>Пн-Пт: 0:00 - 6:00</p>
+                    <p>Сб-Вс: выходные</p>
+                </div>
+            </div>
         </section>
 
-        <section id="portfolio">
-            <h2>Портфолио</h2>
-            <p>Здесь вы можете увидеть примеры наших лучших работ. Каждый проект - это уникальная история успеха и инноваций.</p>
-            <p>Мы гордимся каждым выполненным проектом и стремимся к совершенству в каждой детали.</p>
-        </section>
-
-        <section id="contacts">
-            <h2>Контактная информация</h2>
-            <p>Свяжитесь с нами для обсуждения вашего проекта. Мы всегда рады новым вызовам и интересным проектам.</p>
-            <p>Телефон: +7 (800) 555-35-35</p>
-            <p>Email: upy01@gamil.com</p>
-            <a href="contacts.html" class="button">Подробнее</a>
+        <section>
+            <h2>Форма обратной связи</h2>
+            <p>Заполните форму ниже, и мы свяжемся с вами в ближайшее время:</p>
+            <p style="color: #ff00aa; font-style: italic;">Примечание: Форма находится в разработке и будет доступна в ближайшее время.</p>
         </section>
     </main>
 
     <footer>
         <div class="container">
-            <p>&copy; 2077 UPY-01. Все права защищены.</p>
+            <p>&copy; 2077 UPY-01. Все права защищены?</p>
             <p>Телефон: +7 (123) 456-78-90</p>
         </div>
     </footer>
