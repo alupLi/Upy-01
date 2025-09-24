@@ -1,0 +1,30 @@
+.hero-section {
+    text-align: center;
+    padding: 4rem 2rem;
+    background: linear-gradient(135deg, #2d2d2d 0%, #1a1a1a 100%);
+}
+
+    .hero-section h1 {
+        font-size: 3rem;
+        margin-bottom: 1rem;
+    }
+
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.feature-card {
+    background: #3d3d3d;
+    padding: 2rem;
+    border-radius: 10px;
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+    .feature-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 10px 25px rgba(255, 0, 170, 0.2);
+    }
