@@ -209,6 +209,86 @@
                 grid-template-columns: 1fr;
             }
         }
+
+        .ContactForm {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .form-group input, .form-group textarea {
+            width: 100%;
+            padding: 0.5rem;
+            border: 2px solid #3d3d3d;
+            border-radius: 5px;
+            background-color: #2d2d2d;
+            color: #e0e0e0;
+            font-family: Expressway, Arial, sans-serif;
+            transition: all 0.3s ease;
+            resize: none;
+        }
+
+        .form-group input:focus, .form-group textarea:focus {
+            outline: none;
+            border-color: #ff00aa;
+            box-shadow: 0 0 0 2px rgba(255, 0, 170, 0.2);
+        }
+
+        .submit-btn {
+            background-color: #ff00aa;
+            color: white;
+            border: none;
+            padding: 1rem 2rem;
+            border-radius: 5px;
+            font-family: Expressway, Arial, sans-serif;
+            font-size: 1.1rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            display: block;
+            width: 100%;
+        }
+
+        .submit-btn:hover {
+            background-color: #ff66cc;
+            transform: translateY(-2px);
+        }
+
+        .submit-btn:active {
+            transform: translateY(0);
+        }
+
+        .form-group select {
+            width: 100%;
+            padding: 0.5rem;
+            border: 2px solid #3d3d3d;
+            border-radius: 5px;
+            background-color: #2d2d2d;
+            color: #e0e0e0;
+            font-family: Expressway, Arial, sans-serif;
+            transition: all 0.3s ease;
+            appearance: none;
+            -webkit-appearance: none;
+            cursor: pointer;
+        }
+
+        .form-group select:focus {
+            outline: none;
+            border-color: #ff00aa;
+            box-shadow: 0 0 0 2px rgba(255, 0, 170, 0.2);
+        }
+
+        .form-group select option {
+            background-color: #2d2d2d;
+            color: #e0e0e0;
+            padding: 0.5rem;
+        }
+
+        .form-group select option:hover {
+            background-color: #ff00aa;
+        }
     </style>
 </head>
 <body>
@@ -268,7 +348,34 @@
         <section>
             <h2>Форма обратной связи</h2>
             <p>Заполните форму ниже, и мы свяжемся с вами в ближайшее время:</p>
-            <p style="color: #ff00aa; font-style: italic;">Примечание: Форма находится в разработке и будет доступна в ближайшее время.</p>
+
+            <div>
+                <form id="ContactForm" class="contact-from">
+                    <div class="form-group">
+                        <input type="text" id="name" name="name" placeholder="Имя" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" id="email" name="email" placeholder="Email" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="number" id="number" name="number" placeholder="Номер телефона" required>
+                    </div>
+                    <div class="form-group">
+                        <select id="course" name="course" required>
+                            <option value="">-</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="other">Другой</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <textarea class="form-group" id="massege" name="massege" rows="5" placeholder="Сообщение" required></textarea>
+                    </div>
+                    <button type="submit" class="submit-btn">Отправить</button>
+                </form>
+            </div>
         </section>
     </main>
 
